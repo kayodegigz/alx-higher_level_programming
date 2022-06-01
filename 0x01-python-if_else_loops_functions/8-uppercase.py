@@ -3,7 +3,7 @@ def uppercase(str):
     new_str = ""
     for letter in str:
         ascii_val = ord(letter)
-        
+
         if ascii_val not in range(97, 123):
             new_str += letter
         else:
