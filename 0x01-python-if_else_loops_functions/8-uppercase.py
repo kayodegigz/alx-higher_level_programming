@@ -10,4 +10,4 @@ def uppercase(str):
             ascii_val_upper = ascii_val - 32
             new_char = chr(ascii_val_upper)
             new_str += new_char
-    return new_str
+    print("{}".format(new_str))
