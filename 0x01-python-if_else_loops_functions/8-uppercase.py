@@ -11,4 +11,3 @@ def uppercase(str):
             new_char = chr(ascii_val_upper)
             new_str += new_char
     return new_str
-print(uppercase("Best boy"))
