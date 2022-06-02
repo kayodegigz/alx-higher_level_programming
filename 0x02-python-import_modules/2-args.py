@@ -12,4 +12,4 @@ if __name__ == "__main__":
         i = 1
         while i < args_len:
             print("{}: {}".format(i, sys.argv[i]))
-            i+=1
+            i += 1
