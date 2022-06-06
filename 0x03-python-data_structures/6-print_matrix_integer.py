@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 def print_matrix_integer(matrix=[[]]):
-    if matrix != None:
+    if matrix != [[]]:
         for row in matrix:
             i = 0 #initialize i inside the loop again so the value is reset
             for r in row:
@@ -11,4 +11,4 @@ def print_matrix_integer(matrix=[[]]):
                     print("{:d}".format(r))
                 i += 1
     else:
-        print("")
+        print()
