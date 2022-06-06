@@ -10,5 +10,10 @@ def add_tuple(tuple_a=(), tuple_b=()):
     elif len(tuple_b) > 1:
         new_tuple_b = tuple_b
 
-    sum_t = (new_tuple_a[0] + new_tuple_b[0], new_tuple_a[1] + new_tuple_b[1])
+    if tuple_a == ():
+        sum_t = tuple_b
+    elif tuple_b == ():
+        sum_t = tuple_a
+    else:
+        sum_t = (new_tuple_a[0] + new_tuple_b[0], new_tuple_a[1] + new_tuple_b[1])
     return sum_t
