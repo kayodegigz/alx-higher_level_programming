@@ -1,7 +1,7 @@
 #!/usr/bin/python3
 def multiple_returns(sentence):
-    if str != "":
+    if sentence != "":
         tup = (len(sentence), sentence[0])
-    else:
+    else: 
         tup = (len(sentence), None)
     return tup
