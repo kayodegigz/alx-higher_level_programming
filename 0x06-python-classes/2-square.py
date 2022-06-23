@@ -6,7 +6,11 @@
 
 class Square:
     def __init__(self, size=0):
-        """Size of square is a hidden var and must be a positive int"""
+        """instantiating Size of square is a hidden var
+            and must be a positive int
+        Args:
+            size(int): The size of the square
+        """
         self.__size = size
 
         if typeof(__size) is not int:
