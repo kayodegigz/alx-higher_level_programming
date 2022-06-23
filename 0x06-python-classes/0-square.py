@@ -8,4 +8,4 @@
 
 class Square:
     """Empty class that just defines a square class"""
-    Pass
+    pass
