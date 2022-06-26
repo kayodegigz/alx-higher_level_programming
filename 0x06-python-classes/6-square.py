@@ -7,7 +7,7 @@
 class Square:
     """Represents a square"""
 
-    def __init__(self, size=0, position=(0,0)):
+    def __init__(self, size=0, position=(0, 0)):
         """instantiating Size of square is a hidden var
             and must be a positive int
         Args:
@@ -43,7 +43,7 @@ class Square:
         if self.__size == 0:
             print()
 
-        [print("",end="") for r in range(self.__position[1])]
+        [print("", end="") for r in range(self.__position[1])]
         for i in range(self.__size):
             [print(" ", end="") for n in range(self.__position[0])]
             for j in range(self.__size):
@@ -61,9 +61,8 @@ class Square:
         Args:
             value(int): the value position will be set to
         """
-        if isinstance(value[0], int) and isinstance(value[1], int) == False:
-            raise TypeError("position must be a tuple of 2 positive integers")            
-        if value[0] < 0  and value[1] < 0 or len(value) != 2:
+        if isinstance(value[0], int) and isinstance(value[1], int) is False:
+            raise TypeError("position must be a tuple of 2 positive integers")
+        if value[0] < 0 and value[1] < 0 or len(value) != 2:
             raise TypeError("position must be a tuple of 2 positive integers")
         self.__position = value
-
