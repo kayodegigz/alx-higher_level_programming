@@ -27,7 +27,7 @@ class Square:
         """
         return self.__size
 
-    @setter.size
+    @size.setter
     def size(self, value):
         """sets the size of the attribute size equal to value
         Args:
