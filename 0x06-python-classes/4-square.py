@@ -23,10 +23,16 @@ class Square:
 
     @property
     def size(self):
+        """getter that retrieves the value of the attribute
+        """
         return self.__size
 
     @setter.size
     def size(self, value):
+        """sets the size of the attribute size equal to value
+        Args:
+            value(int): The value that the attribute will be set to
+        """
         if not isinstance(value, int):
             raise TypeError("size must be an integer")
         if size < 0:
