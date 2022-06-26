@@ -60,6 +60,7 @@ class Square:
         """Prints the square on the terminal"""
         if self.__size == 0:
             print()
+            return
 
         [print("") for r in range(self.__position[1])]
         for i in range(self.__size):
