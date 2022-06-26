@@ -17,7 +17,7 @@ my_square_3.my_print()
 print("--")
 
 try:
-    my_square_4 = Square(3, "pos")
+    my_square_4 = Square(3, (1, ))
     my_square_4.my_print()
 except Exception as e:
     print(e)
