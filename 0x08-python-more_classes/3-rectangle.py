@@ -64,7 +64,7 @@ class Rectangle:
         for i in range(self.__height):
             for j in range(self.__width):
                 new_list.append("#")
-            
-            if i < self.__height:  #that is if d loop hasn't gotten to d rectangle's last line
+
+            if i < self.__height - 1:  # dat is if idx isn't @ d rect lastline
                 new_list.append("\n")
         return "".join(new_list)
