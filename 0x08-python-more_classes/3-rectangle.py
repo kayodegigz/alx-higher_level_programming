@@ -60,8 +60,9 @@ class Rectangle:
     def __str__(self):
         if self.__width == 0 or self.__height == 0:
             return ""
+        new_list = []
         for i in range(self.__height):
             for j in range(self.__width):
-                print("#", end="")
-            print()
-        return"k"
+                new_list.append("#")
+            new_list.append("\n")
+        return "".join(new_list)
