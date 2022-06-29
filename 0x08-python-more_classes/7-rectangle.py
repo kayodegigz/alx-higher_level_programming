@@ -67,7 +67,7 @@ class Rectangle:
         new_list = []
         for i in range(self.__height):
             for j in range(self.__width):
-                new_list.append(self.print_symbol)
+                new_list.append(str(self.print_symbol))
 
             if i < self.__height - 1:  # dat is if idx isn't @ d rect lastline
                 new_list.append("\n")
