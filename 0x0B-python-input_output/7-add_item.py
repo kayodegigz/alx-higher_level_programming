@@ -1,6 +1,8 @@
 #!/usr/bin/python3
 """module is a script that encodes python objects to json and saves"""
 
+from sys import argv
+
 
 if __name__ == "__main__":
     load_json_file = __import__('6-load_from_json_file').load_from_json_file
