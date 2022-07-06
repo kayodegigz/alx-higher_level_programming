@@ -14,7 +14,5 @@ if __name__ == "__main__":
         new_list = load_from_json_file("add_item.json")
     except FileNotFoundError:  # if it doesn't exist init a fresh list
         new_list = []
-    while i < len(sys.argv):
-        new_list.append(sys.argv[i])
-        i += 1
+    new_list.extend(sys.argv[1:])
     save_to_json_file(new_list, "add_item.json")
