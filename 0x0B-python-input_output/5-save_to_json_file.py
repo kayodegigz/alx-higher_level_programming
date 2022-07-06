@@ -1,7 +1,8 @@
 #!/usr/bin/python3
-import json
 
 """module writes a json obj into a txt file"""
+
+import json
 
 
 def save_to_json_file(my_obj, filename):
