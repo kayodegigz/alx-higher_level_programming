@@ -17,10 +17,10 @@ class Student:
         , if it is just get the attr value and add it as a value to the dict,
         the key would be the item name
         """
-        if isinstance(attrs, list) and all(isinstance(item, str) for item in attrs):
-                new_dict = {}
-                for item in attrs:
-                    if hasattr(self, item):
-                        new_dict[item] = getattr(self, item)
-                return new_dict
+        if isinstance(attrs, list) and all(isinstance(i, str) for i in attrs):
+            new_dict = {}
+            for item in attrs:
+                if hasattr(self, item):
+                    new_dict[item] = getattr(self, item)
+            return new_dict
         return self.__dict__
