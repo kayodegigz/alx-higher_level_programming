@@ -2,7 +2,6 @@
 """module is a script that encodes python objects to json and saves"""
 
 import sys
-i = 0
 
 
 if __name__ == "__main__":
