@@ -9,9 +9,9 @@ if __name__ == "__main__":
     from sys import argv
 
     try:  # check if file exists by trying to load its contents
-        new_list = load_json_file(add_item.json)
+        new_list = load_json_file("add_item.json")
     except FileNotFoundError:  # if it doesn't exist init a fresh list
         new_list = []
     for arg in argv[1:]:
         new_list.append(arg)
-    save_json_file(new_list, add_item.json)
+    save_json_file(new_list, "add_item.json")
