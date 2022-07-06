@@ -1,7 +1,7 @@
 #!/usr/bin/python3
 """module is a script that encodes python objects to json and saves"""
 
-from sys import argv
+import sys
 
 
 if __name__ == "__main__":
@@ -14,6 +14,6 @@ if __name__ == "__main__":
         new_list = load_json_file("add_item.json")
     except FileNotFoundError:  # if it doesn't exist init a fresh list
         new_list = []
-    for arg in argv[1:]:
+    for arg in sys.argv[1:]:
         new_list.append(arg)
     save_json_file(new_list, "add_item.json")
