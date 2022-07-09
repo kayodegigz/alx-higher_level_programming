@@ -23,18 +23,18 @@ def print_status():
             continue
 
         if counter == 9:
-            print("File size: {:d}".format(size))
+            print("File size: {}".format(size))
             for key, value in sorted(tatus_codes.items()):
                 if value != 0:
-                    print("{}: {:d}".format(key, value))
+                    print("{}: {}".format(key, value))
             counter = 0
         counter += 1
 
     if counter < 9:
-        print("File size: {:d}".format(size))
+        print("File size: {}".format(size))
         for key, value in sorted(status_codes.items()):
             if value != 0:
-                print("{}: {:d}".format(key, value))
+                print("{}: {}".format(key, value))
 
 
 if __name__ == "__main__":
