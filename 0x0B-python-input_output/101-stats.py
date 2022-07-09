@@ -19,22 +19,22 @@ def print_status():
             size += int(line_list[-1])
             code = line[-2]
             status_codes[code] += 1
-        except:
+        except Exception:
             continue
 
         if counter == 10:
-            print("File size: {}".format(size))
+            print("File size: {:d}".format(size))
             for key, value in status_codes.items():
                 if value != 0:
-                    print("{}: {}".format(key, value))
+                    print("{}: {:d}".format(key, value))
             counter = 0
         # counter += 1
 
     if counter < 10:
-        print("File size: {}".format(size))
+        print("File size: {:d}".format(size))
         for key, value in status_codes.items():
             if value != 0:
-                print("{}: {}".format(key, value))
+                print("{}: {:d}".format(key, value))
 
 
 if __name__ == "__main__":
