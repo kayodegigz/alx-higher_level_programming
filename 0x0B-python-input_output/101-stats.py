@@ -19,7 +19,7 @@ def print_status():
             size += int(line_list[-1])
             code = line_list[-2]
             status_codes[code] += 1
-        except:
+        except Exception:
             continue
 
         if counter == 9:
