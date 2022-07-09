@@ -23,7 +23,7 @@ def print_status():
 
         if counter == 9:
             print("File size: {}".format(size))
-            for key, value in sorted(tatus_codes.items()):
+            for key, value in sorted(status_codes.items()):
                 if value != 0:
                     print("{}: {}".format(key, value))
             counter = 0
