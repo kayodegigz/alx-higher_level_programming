@@ -22,7 +22,7 @@ def print_status():
         except Exception:
             continue
 
-        if counter == 10:
+        if counter == 9:
             print("File size: {:d}".format(size))
             for key, value in status_codes.items():
                 if value != 0:
@@ -30,7 +30,7 @@ def print_status():
             counter = 0
         counter += 1
 
-    if counter < 10:
+    if counter < 9:
         print("File size: {:d}".format(size))
         for key, value in status_codes.items():
             if value != 0:
