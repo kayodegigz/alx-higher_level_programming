@@ -32,3 +32,6 @@ TypeError: a must be an integer
 
 >>> add_integer(38790.9, 80966.5)
 119756
+
+>>> add_integer(-202.4, 495.10)
+293
