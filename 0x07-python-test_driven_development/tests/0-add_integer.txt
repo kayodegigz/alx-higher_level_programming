@@ -30,6 +30,5 @@ Traceback (most recent call last):
   ...
 TypeError: a must be an integer
 
->>> add_integer(3.9, 8.5)
-11
-
+>>> add_integer(38790.9, 80966.5)
+119756
