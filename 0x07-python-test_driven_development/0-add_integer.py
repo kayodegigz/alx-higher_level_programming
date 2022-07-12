@@ -2,7 +2,7 @@
 """module adds two variables that have to be ints"""
 
 
-def add_integer(a, b):
+def add_integer(a, b=98):
     """adds two integers a and b while handling exceptions"""
 
     if not isinstance(a, int) and not isinstance(a, float):
