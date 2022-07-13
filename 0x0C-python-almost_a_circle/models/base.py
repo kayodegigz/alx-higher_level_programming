@@ -51,7 +51,7 @@ class Base:
         from models.square import Square
 
         if cls.__name__ == "Rectangle":
-            r = Rectangle(3, 2, 10)
+            r = Rectangle(3, 2)
         elif cls.__name__ == "Square":
             r = Square(11)
         r.update(**dictionary)
