@@ -54,5 +54,5 @@ class Base:
             r = Rectangle(3, 5, 2, 10)
         elif cls.__name__ == "Square":
             r = Square(6, 7, 11)
-        new_inst = r.update(**dictionary)
-        return new_inst
+        r.update(**dictionary)
+        return r
