@@ -33,7 +33,7 @@ class Square(Rectangle):
         if args is None or args is == []:
             for key, value in kwargs.items():
                 setattr(self, key, value)
-            return;
+            return
         self.id = args[0]
         self.size = args[1]
         self.x = args[2]
