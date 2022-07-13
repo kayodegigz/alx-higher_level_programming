@@ -79,3 +79,11 @@ class Rectangle(Base):
         """returns str representation of object"""
         return "[Rectangle] ({}) {}/{} - {}/{}"\
             .format(self.id, self.__x, self.__y, self.__width, self.__height)
+
+    def update(self, *args):
+        """updates the values of the list with items in *args"""
+        args[0] = self.id
+        args[1] = self.__width
+        args[2] = self.__height
+        args[3] = self.__x
+        args[4] = self.__y
