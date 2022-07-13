@@ -96,6 +96,7 @@ class Rectangle(Base):
             pass
 
     def to_dictionary(self):
+        """returns the dict representation of a rectangle instance"""
         list_to_dict = ["id", "width", "height", "x", "y"]
         new_dict = {}
         for key in list_to_dict:
