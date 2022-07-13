@@ -70,5 +70,5 @@ class Rectangle(Base):
         """displays rectangle as hash chars"""
         for h in range(self.__height):
             for w in range(self.__width):
-                print("#",end='')
+                print("#", end='')
             print()
