@@ -28,7 +28,7 @@ class Base:
         """saves a list of objs in json format to a file"""
         with open(cls.__name__.json, "w", encoding="utf-8") as j_file:
             if list_objs is None:
-                json.dump([], j_file)
+                j_file.write([])
             else:
                 json_str = cls.to_json_string(list_objs)
-                json.dump(json_str, j_file)
+                j_file.write(json_str)
