@@ -33,7 +33,7 @@ class Base:
                 j_file.write("[]")
             else:
                 for obj in list_objs:
-                    """append each object representated as a dict to list_dict"""
+                    """append each object represented as a dict to list_dict"""
                     list_dict.append(obj.to_dictionary())
                 json_str = cls.to_json_string(list_dict)
                 j_file.write(json_str)
