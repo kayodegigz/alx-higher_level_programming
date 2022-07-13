@@ -49,9 +49,10 @@ class Base:
     def create(cls, **dictionary):
         from models.rectangle import Rectangle
         from models.square import Square
-        if cls.__name__ == Rectangle:
-            r = Rectangle(3, 5, 3, 2, 10)
-        elif cls.__name__ == Square:
+
+        if cls.__name__ == "Rectangle":
+            r = Rectangle(3, 5, 2, 10)
+        elif cls.__name__ == "Square":
             r = Square(6, 7, 11)
         new_inst = r.update(**dictionary)
         return new_inst
