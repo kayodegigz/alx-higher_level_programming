@@ -94,3 +94,10 @@ class Rectangle(Base):
             self.__y = args[4]
         except IndexError:
             pass
+
+    def to_dictionary(self):
+        list_to_dict = ["id", "width", "height", "x", "y"]
+        new_dict = {}
+        for key in list_to_dict:
+            new_dict[key] = getattr(self, key)
+        return new_dict
