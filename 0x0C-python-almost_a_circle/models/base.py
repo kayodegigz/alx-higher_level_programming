@@ -56,3 +56,17 @@ class Base:
             r = Square(11)
         r.update(**dictionary)
         return r
+
+    @classmethod
+    def load_from_file(cls):
+        filename = cls.__name__ + ".json"
+        try:
+            with open(filename, "r") as f:
+                list_of_dicts = cls.from_json_string(f.read())
+        except FileNotFoundError:
+            return []
+
+        new_list = []
+        for d in list_of_dicts:
+            new_list.append(cls.create(**d))
+        return new_list
