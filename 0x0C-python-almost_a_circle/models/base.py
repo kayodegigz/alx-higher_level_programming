@@ -1,6 +1,7 @@
 #!/usr/bin/python3
 """module contains a class that defines a base"""
 import json
+import csv
 
 
 class Base:
@@ -70,3 +71,41 @@ class Base:
         for d in list_of_dicts:
             new_list.append(cls.create(**d))
         return new_list
+
+    @classmethod
+    def save_to_file_csv(cls, list_objs):
+        """gets list of objs, converts to l of dicts amd writes to csv file"""
+        filename = cls.__name__ + ".csv"
+        list_of_dicts = []
+        with open(filename, "w", encoding="utf-8") as csv_f:
+            field_name_keys = []
+            for obj in list_objs:
+                list_of_dicts.append(cls.to_dictionary(obj))
+            for key in list_of_dicts[0].keys():
+                """looping thru d keys of the 1st dict to get the
+                field names since the keys serve as field names in
+                csv files"""
+                field_name_keys.append(key)
+            writer = csv.DictWriter(csv_f, fieldnames=field_name_keys)
+            writer.writeheader()
+            writer.writerows(list_of_dicts)
+
+    @classmethod
+    def load_from_file_csv(cls):
+        filename = cls.__name__ + ".csv"
+        try:
+            with open(filename, "r") as csv_f:
+                list_of_inst = []
+                reader = csv.DictReader(csv_f)
+                list_of_dicts = list(reader)
+
+                """new_dict will hold the int version of values
+                in the dict d cos they're in str format from the csv file"""
+                new_dict = {}
+                for d in list_of_dicts:
+                    for key, value in d.items():
+                        new_dict[key] = int(value)
+                    list_of_inst.append(cls.create(**new_dict))
+                return list_of_inst
+        except FileNotFoundError:
+            return []
