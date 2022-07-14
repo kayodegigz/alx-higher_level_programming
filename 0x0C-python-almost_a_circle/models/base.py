@@ -41,6 +41,7 @@ class Base:
 
     @staticmethod
     def from_json_string(json_string):
+        """changes a jsonstr to python objs"""
         if not json_string:
             return []
         else:
@@ -48,6 +49,7 @@ class Base:
 
     @classmethod
     def create(cls, **dictionary):
+        """creates an instance from a dict"""
         from models.rectangle import Rectangle
         from models.square import Square
 
@@ -60,6 +62,7 @@ class Base:
 
     @classmethod
     def load_from_file(cls):
+        """loads from a json file"""
         filename = cls.__name__ + ".json"
         try:
             with open(filename, "r") as f:
@@ -92,6 +95,7 @@ class Base:
 
     @classmethod
     def load_from_file_csv(cls):
+        """loads from a csv file"""
         filename = cls.__name__ + ".csv"
         try:
             with open(filename, "r") as csv_f:
