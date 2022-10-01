@@ -9,9 +9,10 @@ import sys
 
 url = sys.argv[1]
 
-try:
-    with urllib.request.urlopen(url) as response:
-        html = response.read()
-        print(html.decode("utf-8"))
-except urllib.error.HTTPError as err:
-    print("Error code: {}".format(err.code))
+if __name__ == '__main__':
+    try:
+        with urllib.request.urlopen(url) as response:
+            html = response.read()
+            print(html.decode("utf-8"))
+    except urllib.error.HTTPError as err:
+        print("Error code: {}".format(err.code))
