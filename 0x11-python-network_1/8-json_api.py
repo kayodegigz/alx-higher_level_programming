@@ -19,7 +19,7 @@ if __name__ == '__main__':
     response = requests.post(url, data={'q': letter})
     try:
         r_dict = response.json()
-        
+
         if r_dict:
             print("[{}] {}".format(r_dict.get('id'), r_dict.get('name')))
         else:
