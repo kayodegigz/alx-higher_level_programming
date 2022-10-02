@@ -7,7 +7,7 @@
 
 import requests
 import sys
-import requests.HTTPBasicAuth
+from requests.auth import HTTPBasicAuth
 
 if __name__ == '__main__':
     repo = sys.argv[1]
