@@ -6,7 +6,7 @@ request('https://swapi.co/api/films/' + process.argv[2], function (err, resp, bo
   if (err) {
     console.log(err);
   } else if (resp.statusCode === 200 && resp.headers['content-type'] === 'application/json') {
-    let chars = JSON.parse(body).characters;
+    const chars = JSON.parse(body).characters;
     for (let i = 0; i < chars.length; i++) {
       request(chars[i], function (error, response, body) {
         if (error) {
